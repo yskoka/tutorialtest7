@@ -19,7 +19,7 @@ jobs:
           BRANCH_NAME="${GITHUB_REF#refs/heads/}"
           echo "Branch: $BRANCH_NAME"
 
-          PRS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          PRS=$(curl -s -H "Authorization: token ${{ github.token }}" \
             "https://api.github.com/repos/${{ github.repository }}/pulls?state=open")
 
           MATCHING_PR=$(echo "$PRS" | jq -r --arg branch "$BRANCH_NAME" '.[] | select(.head.ref == $branch) | .number')
