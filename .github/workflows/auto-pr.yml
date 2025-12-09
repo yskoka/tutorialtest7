@@ -37,7 +37,7 @@ jobs:
         uses: actions/github-script@v7
         if: steps.check_pr.outputs.exists == 'false'
         with:
-          github-token: ${{ secrets.AUTO_PR_CREATE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const headRef = '${{ github.ref_name }}'
             const createParams = {
