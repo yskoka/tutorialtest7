@@ -1,5 +1,5 @@
 defaultContentLanguage = 'ja'
-baseURL = 'https://yskoka.github.io/tutorialtest7'
+baseURL = 'https://yskoka.github.io/tutorialtest7/'
 # languageCode = 'ja'
 title = 'OCIチュートリアル'
 theme = "hugo-geekdoc"
