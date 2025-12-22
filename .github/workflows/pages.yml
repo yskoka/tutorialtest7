@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Hugoのインストール
+      # 2. Hugoのインストール（公式方式）
       - name: Install Hugo
         env:
           HUGO_VERSION: 0.148.2
